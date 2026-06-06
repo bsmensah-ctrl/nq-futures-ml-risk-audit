@@ -1,0 +1,4 @@
+block,sims,p_positive,total_pnl_p05,total_pnl_median,total_pnl_worst,max_drawdown_median,max_drawdown_worst,annualized_sharpe_p05,annualized_sharpe_median
+day,2000,1.0,41841.94,60984.81,20505.58,-3975.78,-9896.75,3.308,4.58
+month,2000,1.0,32790.9,60104.72,4434.58,-4660.11,-13781.92,1.849,2.939
+week,2000,1.0,36590.47,61211.02,10518.22,-4912.35,-12768.66,2.296,3.498

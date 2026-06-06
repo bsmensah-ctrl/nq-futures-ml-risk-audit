@@ -1,0 +1,5 @@
+variant,slippage_points_per_leg,trades,total_pnl,avg_trade,win_rate,profit_factor,max_trade_order_drawdown,trade_t_stat_not_sharpe,monthly_count,monthly_positive,monthly_sharpe_ann,monthly_worst,daily_active_count,daily_sharpe_ann_active_days,daily_worst,feature_mode
+ablation_all,1.5,1925,60511.45,31.43,0.6712,1.393,-5378.91,5.737,16,14,2.914,-1819.81,321,4.427,-1210.53,all
+ablation_no_time,1.5,1367,55814.89,40.83,0.6789,1.553,-3539.08,6.222,16,13,3.264,-1517.07,319,4.82,-1231.34,no_time
+ablation_time_only,1.5,1187,25709.91,21.66,0.6824,1.286,-9552.14,3.499,16,10,1.334,-3663.53,241,3.358,-1203.72,time_only
+ablation_volatility_only,1.5,1134,57152.4,50.4,0.7072,1.694,-3634.46,6.886,16,13,3.366,-815.29,315,5.73,-1086.77,volatility_only

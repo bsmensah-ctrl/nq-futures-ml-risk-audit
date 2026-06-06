@@ -1,0 +1,6 @@
+check,verdict,evidence
+future_shift_in_features,pass,No negative shift found in feature assignments.
+future_shift_in_labels,allowed,"Negative shift appears in labels only: 103: f[""lv""] = ((h.shift(-1) - l.shift(-1)) > 1.2 * a14).astype(int) | 104: f[""ld""] = (c.shift(-1) > c).astype(int)"
+original_fold_boundary_overlap,warn,Original pandas slices share 5 timestamp rows across train/test boundaries.
+test_fold_used_for_early_stopping,warn,"Original LightGBM fit uses eval_set=[(Xte, te[label])] for early stopping; audit adds train-tail clean eval."
+old_monte_carlo_meaning,warn,"Original Monte Carlo permutes final trade PnL, preserving total PnL; it is a path-order drawdown test, not proof of edge."

@@ -1,0 +1,52 @@
+name: Reproducibility
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit-artifacts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Compile scripts
+        run: python -m py_compile src/reproduce_metrics.py src/overfit_replication_audit.py
+
+      - name: Reproduce packaged metrics
+        run: python src/reproduce_metrics.py
+
+      - name: Check for local path leaks
+        run: python - <<'PY'
+          from pathlib import Path
+          import re
+
+          root = Path(".")
+          bad_literals = ["C:" + "\\Users", "One" + "Drive", "App" + "Data", "gho" + "_"]
+          key_pattern = re.compile(r"sk-[A-Za-z0-9]{16,}")
+          failures = []
+          for path in root.rglob("*"):
+              if path.is_dir():
+                  continue
+              if any(part in {".git", "__pycache__"} for part in path.parts):
+                  continue
+              if path.suffix.lower() in {".pdf", ".png"}:
+                  continue
+              text = path.read_text(encoding="utf-8", errors="ignore")
+              if any(token in text for token in bad_literals) or key_pattern.search(text):
+                  failures.append(str(path))
+          if failures:
+              raise SystemExit("Possible local path or secret leak: " + ", ".join(failures))
+          PY

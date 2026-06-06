@@ -1,0 +1,9 @@
+variant,slippage_points_per_leg,trades,total_pnl,avg_trade,win_rate,profit_factor,max_trade_order_drawdown,trade_t_stat_not_sharpe,monthly_count,monthly_positive,monthly_sharpe_ann,monthly_worst,daily_active_count,daily_sharpe_ann_active_days,daily_worst
+straddle_filtered_base_cost,0.5,2022,142181.12,70.32,0.6993,2.035,-2414.33,13.117,16,16,6.711,1890.43,321,10.456,-1135.81
+straddle_filtered_delayed_entry,0.5,2022,145547.63,71.98,0.7008,2.066,-2414.33,13.362,16,16,6.568,2588.33,321,10.063,-1240.69
+directional_filtered_failure_case,0.5,2022,-6274.53,-3.1,0.2839,0.975,-14095.21,-0.452,16,8,-0.481,-7036.0,321,-0.4,-2283.0
+straddle_filtered_slippage_stress,0.5,2022,142181.12,70.32,0.6993,2.035,-2414.33,13.117,16,16,6.711,1890.43,321,10.456,-1135.81
+straddle_filtered_slippage_stress,1.0,2022,101741.12,50.32,0.6889,1.68,-2769.28,9.386,16,16,4.831,389.19,321,7.534,-1255.81
+straddle_filtered_slippage_stress,1.5,2022,61301.12,30.32,0.6657,1.377,-6288.05,5.655,16,13,2.848,-2570.81,321,4.548,-1410.29
+straddle_filtered_slippage_stress,2.0,2022,20861.12,10.32,0.6316,1.118,-19830.14,1.925,16,9,0.926,-5530.81,321,1.543,-1590.29
+straddle_filtered_slippage_stress,2.5,2022,-19578.88,-9.68,0.5861,0.898,-39627.88,-1.806,16,6,-0.815,-8591.32,321,-1.437,-1776.03

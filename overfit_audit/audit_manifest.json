@@ -1,0 +1,78 @@
+{
+  "audit_root": "overfit_audit",
+  "created_utc": "2026-06-05T23:25:35.778092+00:00",
+  "data": {
+    "cross_instrument_files": {
+      "ES": {
+        "exists": true,
+        "path": "data/raw/databento_es_1m.csv",
+        "sha256": "fa07d1cda9d2ecf5b46dd58ed2ba47cc993dac61e59a52b198816100c976e1c8"
+      },
+      "MGC": {
+        "exists": true,
+        "path": "data/raw/databento_mgc_1m.csv",
+        "sha256": "86827009c2d373b9505df45199d5d74c2015137bc86fa6e8c50bdb133b5dcd35"
+      }
+    },
+    "nq": {
+      "feature_end": "2026-04-17 20:59:00+00:00",
+      "feature_start": "2024-01-01 23:30:00+00:00",
+      "path": "data/raw/databento_nq_1m.csv",
+      "raw_end": "2026-04-17 20:59:00+00:00",
+      "raw_start": "2024-01-01 23:00:00+00:00",
+      "rows_features": 802354,
+      "rows_raw": 802384,
+      "sha256": "860e14b06b44a3d1b8064b3aeb0306e47164b3f48fe7a73b85b2736b367f6275",
+      "source_path": "data/raw/databento_nq_1m.csv"
+    }
+  },
+  "environment": {
+    "executable": "python",
+    "packages": {
+      "lightgbm": "4.6.0",
+      "matplotlib": "3.10.8",
+      "numpy": "2.4.4",
+      "pandas": "2.2.3",
+      "reportlab": "4.5.1",
+      "scikit-learn": "1.8.0"
+    },
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]"
+  },
+  "run_id": "overfit_audit_20260605T232524Z",
+  "strategy_frozen": {
+    "base_slippage_points_per_leg": 0.5,
+    "confidence_threshold": 0.52,
+    "cost_per_leg_usd": 17.0,
+    "max_hold_bars": 25,
+    "model": {
+      "class": "lightgbm.LGBMClassifier",
+      "colsample_bytree": 0.7,
+      "learning_rate": 0.04,
+      "max_depth": 5,
+      "min_child_samples": 40,
+      "n_estimators": 300,
+      "num_leaves": 31,
+      "random_state": 42,
+      "subsample": 0.8
+    },
+    "point_values": {
+      "ES": 50.0,
+      "MGC": 10.0,
+      "NQ": 20.0
+    },
+    "random_seed": 42,
+    "slide_months": 3,
+    "slippage_points_tested": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "source_script": "original_private_research/GBM_Straddle_Databento.py",
+    "source_script_sha256": "d6def243943a86fa2d275484df5299f77b716c9778c661f395bc308605f5c8d4",
+    "test_months": 3,
+    "train_months": 12
+  }
+}

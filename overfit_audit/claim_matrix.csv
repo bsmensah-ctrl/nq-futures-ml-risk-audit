@@ -1,0 +1,22 @@
+claim,source,prior_value,replicated_value,tolerance,units,verdict
+Filtered straddle total PnL at 0.5 pt/leg,fresh_conservative_metrics.csv,142181.12,142181.12,1.0,USD,supported
+Filtered straddle trades at 0.5 pt/leg,fresh_conservative_metrics.csv,2022,2022,0,trades,supported
+Filtered straddle monthly Sharpe at 0.5 pt/leg,fresh_conservative_metrics.csv,6.711,6.711,0.01,annualized,supported
+Filtered straddle total PnL at 1.0 pt/leg,fresh_conservative_metrics.csv,101741.12,101741.12,1.0,USD,supported
+Filtered straddle trades at 1.0 pt/leg,fresh_conservative_metrics.csv,2022,2022,0,trades,supported
+Filtered straddle monthly Sharpe at 1.0 pt/leg,fresh_conservative_metrics.csv,4.831,4.831,0.01,annualized,supported
+Filtered straddle total PnL at 1.5 pt/leg,fresh_conservative_metrics.csv,61301.12,61301.12,1.0,USD,supported
+Filtered straddle trades at 1.5 pt/leg,fresh_conservative_metrics.csv,2022,2022,0,trades,supported
+Filtered straddle monthly Sharpe at 1.5 pt/leg,fresh_conservative_metrics.csv,2.848,2.848,0.01,annualized,supported
+Filtered straddle total PnL at 2.0 pt/leg,fresh_conservative_metrics.csv,20861.12,20861.12,1.0,USD,supported
+Filtered straddle trades at 2.0 pt/leg,fresh_conservative_metrics.csv,2022,2022,0,trades,supported
+Filtered straddle monthly Sharpe at 2.0 pt/leg,fresh_conservative_metrics.csv,0.926,0.926,0.01,annualized,supported
+Filtered straddle total PnL at 2.5 pt/leg,fresh_conservative_metrics.csv,-19578.88,-19578.88,1.0,USD,supported
+Filtered straddle trades at 2.5 pt/leg,fresh_conservative_metrics.csv,2022,2022,0,trades,supported
+Filtered straddle monthly Sharpe at 2.5 pt/leg,fresh_conservative_metrics.csv,-0.815,-0.815,0.01,annualized,supported
+Directional filtered strategy is a failure case,fresh_conservative_metrics.csv,-6274.53,-6274.53,1.0,USD,supported
+Old 9+ or 13+ value is a finance Sharpe ratio,legacy GBM_Straddle_Databento.py sh column,13.117,trade_t_stat_not_sharpe,none,metric label,rejected
+No direct future-looking feature leakage found,static source scan,not previously formalized,pass,none,audit verdict,supported
+Original validation is pure out-of-sample,source-code audit,implicit,warnings: original_fold_boundary_overlap; test_fold_used_for_early_stopping; old_monte_carlo_meaning,none,audit verdict,corrected
+1.5 pt/leg slippage case remains positive,overfit_audit stress_table.csv,positive required,61301.12,positive PnL,USD,supported
+2.5 pt/leg slippage breaks the edge,overfit_audit stress_table.csv,negative expected,-19578.88,negative PnL,USD,supported
