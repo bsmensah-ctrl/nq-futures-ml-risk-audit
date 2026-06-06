@@ -83,6 +83,9 @@ If you only have five minutes:
 │   ├── audit_manifest.json
 │   ├── charts/
 │   └── tables/
+├── paper_trading_log/
+│   ├── paper_trading_log_template.csv
+│   └── weekly_review_template.md
 ├── results/
 │   └── packaged fresh validation summaries
 └── src/
@@ -125,3 +128,7 @@ The expected CSV columns are `timestamp`, `open`, `high`, `low`, `close`, and `v
 ## Limitations
 
 This repo does not claim live profitability. The backtests depend on historical bars, modeled costs, and intrabar fill assumptions. The next validation step would be a locked paper-trading period with no parameter changes.
+
+## Forward Validation Template
+
+The `paper_trading_log/` folder provides a locked forward-testing template for tracking every signal, paper fill, slippage estimate, and weekly review without changing parameters midstream.

@@ -1,0 +1,3 @@
+date,session,signal_time_et,instrument,setup_version,signal_type,model_confidence,backtest_expected_entry,planned_entry,actual_paper_fill,fill_source,slippage_points,planned_stop,planned_target,max_adverse_excursion_points,max_favorable_excursion_points,exit_time_et,exit_price,gross_pnl,estimated_costs,net_pnl,matched_backtest_assumption,trade_taken,skip_reason,notes
+YYYY-MM-DD,RTH,HH:MM,NQ,nq_ml_risk_audit_v1,filtered_straddle,,,,paper_fill,,,,,,,,,,,unknown,yes,,
+
