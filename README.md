@@ -37,6 +37,16 @@ The result is **NQ-specific historical research**, not a live trading system.
 
 ![Slippage stress breakpoint](overfit_audit/charts/slippage_stress_pnl.png)
 
+## Reviewer Fast Path
+
+If you only have five minutes:
+
+1. Read the [methods summary](docs/METHODS.md).
+2. Open the [claim matrix](overfit_audit/claim_matrix.csv).
+3. Run `python src/reproduce_metrics.py`.
+4. Check the [validation checklist](docs/VALIDATION_CHECKLIST.md).
+5. Skim the [audit report](overfit_audit/AUDIT_REPORT.pdf).
+
 ## What Survived
 
 - Independent rebuild matched the prior conservative 1.5 pt/leg claim.
@@ -61,6 +71,8 @@ The result is **NQ-specific historical research**, not a live trading system.
 ├── REPRODUCIBILITY.md
 ├── report.pdf
 ├── docs/
+│   ├── METHODS.md
+│   ├── VALIDATION_CHECKLIST.md
 │   └── report.md
 ├── data/
 │   └── README.md
@@ -83,6 +95,7 @@ The result is **NQ-specific historical research**, not a live trading system.
 ```bash
 pip install -r requirements.txt
 python src/reproduce_metrics.py
+pytest -q
 ```
 
 The quick reproducer reads only committed CSV artifacts. It does not require raw vendor data.
@@ -105,6 +118,8 @@ The expected CSV columns are `timestamp`, `open`, `high`, `low`, `close`, and `v
 - [Technical report](report.pdf)
 - [Overfitting audit report](overfit_audit/AUDIT_REPORT.pdf)
 - [Claim matrix](overfit_audit/claim_matrix.csv)
+- [Methods](docs/METHODS.md)
+- [Validation checklist](docs/VALIDATION_CHECKLIST.md)
 - [Reproducibility notes](REPRODUCIBILITY.md)
 
 ## Limitations

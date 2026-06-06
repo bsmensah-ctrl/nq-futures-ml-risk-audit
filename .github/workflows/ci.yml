@@ -28,6 +28,9 @@ jobs:
       - name: Reproduce packaged metrics
         run: python src/reproduce_metrics.py
 
+      - name: Run artifact tests
+        run: python -m pytest -q
+
       - name: Check for local path leaks
         run: |
           python - <<'PY'
